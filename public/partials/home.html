@@ -1,0 +1,15 @@
+<h1>home page</h1>
+<ul>
+  <li ng-repeat = "video in Videos">
+    <!--angular绑定的表达式通过视频id来动态渲染呢  -->
+    <a href="/#/video/{{video._id}}">
+      {{video.title}}
+    </a>
+    <a href="/#/video/delete/{{video._id}}">
+       <i class="glyphicon glyphicon-remove"></i>
+   </a>
+  </li>
+
+</ul>
+<!--注意在Angular应用中需要在链接前添加 /#。这是为了兼容老的不支持单页应用的浏览器。  -->
+<p><a href="/#/add-video">add a video</a></p>
